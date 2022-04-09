@@ -1,14 +1,12 @@
 <template>
- <Header />
+Main page
 </template>
 
 
 <script>
-import Header from '@/components/Header'
 export default {
   name: 'MainPage',
   components: {
-    Header
   }
 }
 </script>
