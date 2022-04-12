@@ -79,26 +79,20 @@ export default {
         border: 1px solid rgb(20, 162, 206);
         border-radius: 30px;
     }
-
     .error{
         color: red;
         font-size: 20px;
 
     }
-
     .success{
         color: green;
         font-size: 20px;
     }
-
     .info{
         font-size: 20px;
     }
-
     img{
         width: 15%;
         position: absolute;
     }
-
-
 </style>

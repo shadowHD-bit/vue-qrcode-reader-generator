@@ -1,6 +1,6 @@
 <template>
 <div class="generatorPage">
-      <QRReader />
+    <QRReader />
 </div>
 </template>
 
@@ -10,7 +10,7 @@ import QRReader from '@/components/QRReader.vue'
 export default {
   name: 'App',
   components: {
-      QRReader
+    QRReader
   }
 }
 </script>
@@ -18,12 +18,10 @@ export default {
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  
 }
 .generatorPage{
     width: 100%;
@@ -42,6 +40,5 @@ export default {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
 }
 </style>

@@ -3,7 +3,7 @@
     <div class="header">
       <div class="container">
         <div class="logo">
-          <i class="fa-brands fa-github"></i>
+          <a href="https://github.com/shadowHD-bit" target="_blank"><i class="fa-brands fa-github"></i></a>
           <span>QR-GENERATOR-READER</span>
         </div>
         <div class="right-buttons">
@@ -70,6 +70,10 @@ span{
 .right-buttons a:hover{
   background-color: #4C49F2;
   transition: all ease .3s;
+}
+a{
+  color: white;
+  text-decoration: none;
 }
 
 </style>
