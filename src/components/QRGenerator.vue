@@ -2,10 +2,7 @@
 <div class="container">
     <div class="input">
         <p>
-            dfhdffd
-        </p>
-        <p>
-            dfhdffd
+            Specify the text you want to see QR code
         </p>
         <form>
             <input type="text" placeholder="example.com" v-model="QRValue" />
@@ -36,57 +33,25 @@
             <p>Choose color of background for QR-code</p>
               <input type="color" id="backChange" name="backChange"
               v-model="QRBackground">
-              <label for="backChange">{{QRBackground}}</label>
-
           </div>
 
           <p>Choose color for QR-code</p>
           <div class="choseColor">
           <input type="color" id="colorChange" name="colorChange"
            v-model="QRColor">
-
-          <input type="color" id="colorChangeTwo" name="colorChangeTwo"
-           v-model="QRColorTwo">
           </div>
           
         </div>
     </div>
     <div class="image-qr" :style="{background: QRBackground}">
-        <QRCodeVue3
-          :width="parseInt(QRSize)"
-          :height="parseInt(QRSize)"
-          :value="QRValue"
-          :qrOptions="{ typeNumber: 0, mode: 'Byte', errorCorrectionLevel: QRLever }"
-          :imageOptions="{ hideBackgroundDots: true, imageSize: 0.4, margin: 0 }"
-          :dotsOptions="{
-            type: 'dots',
-            color: '#26249a',
-            gradient: {
-              type: 'linear',
-              rotation: 0,
-              colorStops: [
-                { offset: 0, color: QRColor },
-                { offset: 1, color: QRColorTwo },
-              ],
-            },
-          }"
-          :backgroundOptions="{ color: QRBackground }"
-          :cornersSquareOptions="{ type: 'dot', color: '#000000' }"
-          :cornersDotOptions="{ type: undefined, color: '#000000' }"
-          fileExt="png"
-          :download="true"
-          myclass="my-qur"
-          imgclass="img-qr"
-          downloadButton="my-button"
-          :downloadOptions="{ name: 'vqr', extension: 'png' }"
-        />    
+       <qrcode-vue :value="QRValue" :size="QRSize" :level="QRLever" :render-as="QRRender" :foreground="QRColor" :background="QRBackground"/>
     </div>
 </div>
 </template>
 
 <script>
 
-import QRCodeVue3 from "qrcode-vue3";
+import QrcodeVue from 'qrcode.vue'
   export default {
     data() {
       return {
@@ -96,11 +61,10 @@ import QRCodeVue3 from "qrcode-vue3";
         QRRender: 'svg',
         QRBackground: '#ffffff',
         QRColor: '#000000',
-        QRColorTwo: "#000000",
       }
     },
     components: {
-      QRCodeVue3
+      QrcodeVue
     },
   }
 </script>
@@ -139,11 +103,5 @@ import QRCodeVue3 from "qrcode-vue3";
       margin: 10px 0px 0px 0px;
     }
 
-    .choseColor{
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
   
 </style>
