@@ -20,5 +20,5 @@ npm run build
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+---------------------------------------
+Please, check [Demo](https://6255341408e2c31b3d6ff108--beautiful-heliotrope-7e88c1.netlify.app/)
